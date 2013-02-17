@@ -1,0 +1,20 @@
+import java.lang.Math;
+public class Main
+{
+  public static void main (String[] args)
+	{
+		Points p1 = new Points( 1, 2);
+		Points p2 = new Points( 2, 5);
+		Points p3 = new Points( 4, 6);
+		Points p4 = new Points( 5, 5);
+		Points p5 = new Points( 4, 2);
+		
+		Points[] arry = {p1,p2,p3,p4,p5};
+		
+		Distance dit = new Distance();
+		float perimeter;
+		
+		perimeter = dit.dist( arry );
+		System.out.println("\n\nTotal Perimeter is : " + perimeter);
+	}
+}
