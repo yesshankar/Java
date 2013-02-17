@@ -1,0 +1,22 @@
+public class Distance
+{
+  float result, sum;
+	int i,j;
+	float dist( Points[] arr)
+	{
+		System.out.println("\nGiven Points are: ");
+		for( i = 0; i < 5; i++) //just to print given points
+			System.out.println("\nP" + (i+1) + " = ( " + arr[i].x + " , " + arr[i].y + " )");
+		
+		for( i = 0,j = 1; i < 5; i++, j++) // to calculate distance between two points
+		{			
+			if( j == 5 ) // condition for taking last and first point.
+				j = 0;
+				
+			result = (float) Math.sqrt(((arr[i].x-arr[j].x)*(arr[i].x-arr[j].x)) + ((arr[i].y-arr[j].y)*(arr[i].y-arr[j].y)));
+			sum += result;
+			System.out.println("\nDistance between points p" + (i+1) + " and p" + (j+1) + " is : " + result);
+		}
+		return sum;
+	}
+}
